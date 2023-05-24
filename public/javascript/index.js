@@ -1,9 +1,10 @@
 const charactersAPI = new APIHandler('http://localhost:8000');
 
-window.addEventListener('load', () => {
-  document.getElementById('fetch-all').addEventListener('click', function (event) {
-
+window.addEventListener("load", () => {
+  document.getElementById("fetch-all").addEventListener("click", async function (event) {
+    const allCharacters = await charactersAPI.getFullList("characters");
   });
+  
 
   document.getElementById('fetch-one').addEventListener('click', function (event) {
 
